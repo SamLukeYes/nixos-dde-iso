@@ -13,24 +13,24 @@
     system = "x86_64-linux";
     commonModules = [
       dde-nixos.nixosModules.${system}
-      "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares.nix"
+      "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
       ./iso.nix
     ];
   in {
     nixosConfigurations = {
+      generic = nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules = commonModules;
+      };
       cn = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = commonModules ++ [
           ./cn.nix
         ];
       };
-      generic = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = commonModules;
-      };
     };
     packages.${system} = {
-      default = self.nixosConfigurations.live.config.system.build.isoImage;
+      default = self.nixosConfigurations.generic.config.system.build.isoImage;
       cn = self.nixosConfigurations.cn.config.system.build.isoImage;
     };
   };
