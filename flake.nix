@@ -29,8 +29,8 @@
         ];
       };
     };
-    packages.${system} = {
-      default = self.nixosConfigurations.generic.config.system.build.isoImage;
+    legacyPackages.${system} = {
+      generic = self.nixosConfigurations.generic.config.system.build.isoImage;
       cn = self.nixosConfigurations.cn.config.system.build.isoImage;
     };
   };

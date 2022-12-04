@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
   fonts.fonts = with pkgs; [
@@ -15,6 +15,8 @@
       ];
     };
   };
+
+  isoImage.isoBaseName = lib.mkForce "nixos-dde-cn";
 
   nix.settings.substituters = [
     "https://mirrors.bfsu.edu.cn/nix-channels/store"

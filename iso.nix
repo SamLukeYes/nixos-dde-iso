@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  isoImage = {
+    isoBaseName = "nixos-dde";
+    squashfsCompression = "zstd";
+  };
+
   nix.settings = {
     auto-optimise-store = true;
     experimental-features = [
