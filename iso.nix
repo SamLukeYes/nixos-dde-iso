@@ -17,7 +17,7 @@
   # Use alternative browser
   nixpkgs.overlays = [(
     final: prev: {
-      firefox = final.chromium;
+      firefox = final.epiphany;
     }
   )];
 
