@@ -14,6 +14,13 @@
     fallback = true;
   };
 
+  # Use alternative browser
+  nixpkgs.overlays = [(
+    final: prev: {
+      firefox = final.chromium;
+    }
+  )];
+
   services.xserver = {
     enable = true;
     displayManager = {
