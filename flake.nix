@@ -2,14 +2,18 @@
   description = "NixOS live image with DDE";
 
   inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
     dde-nixos = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:linuxdeepin/dde-nixos";
     };
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    sigprof = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:sigprof/nur-packages";
+    };
   };
 
-  outputs = { self, dde-nixos, nixpkgs }: let
+  outputs = { self, dde-nixos, sigprof, nixpkgs }: let
     system = "x86_64-linux";
     commonModules = [
       dde-nixos.nixosModules.${system}
@@ -26,6 +30,15 @@
         inherit system;
         modules = commonModules ++ [
           ./cn.nix
+          {
+            nixpkgs.overlays = [(
+              final: prev: {
+                firefox = prev.firefox.override {
+                  nixExtensions = [ sigprof.packages.${system}.firefox-langpack-zh-CN ];
+                };
+              }
+            )];
+          }
         ];
       };
     };
