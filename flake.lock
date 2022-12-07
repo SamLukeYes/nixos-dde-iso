@@ -8,16 +8,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1670419396,
-        "narHash": "sha256-zKHTStjXv9Off+inBBD/tVdcZwKnWMgJ9oasJrvc5B8=",
+        "lastModified": 1670426440,
+        "narHash": "sha256-LZdzNnprIUrpgKOMoi6qDTMpqwtXkYYrBJ+4RVTz6Q0=",
         "owner": "SamLukeYes",
         "repo": "dde-nixos",
-        "rev": "4aa0bdab2a1f884347f8789ea24e1a65dab89163",
+        "rev": "81bef55743040613763430a15a12d672212f23c9",
         "type": "github"
       },
       "original": {
         "owner": "SamLukeYes",
-        "ref": "no-dde-introduction",
+        "ref": "excludePackages",
         "repo": "dde-nixos",
         "type": "github"
       }
@@ -39,11 +39,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1670276674,
-        "narHash": "sha256-FqZ7b2RpoHQ/jlG6JPcCNmG/DoUPCIvyaropUDFhF3Q=",
+        "lastModified": 1670372410,
+        "narHash": "sha256-BDiOUkuqgq5DP+E5xfTzIFYYyMb8DpSLYmeaOBeZ0vg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "52e3e80afff4b16ccb7c52e9f0f5220552f03d04",
+        "rev": "5528350186a9e826588cee1329640899ca44a0cf",
         "type": "github"
       },
       "original": {

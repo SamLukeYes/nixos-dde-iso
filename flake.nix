@@ -4,7 +4,7 @@
   inputs = {
     dde-nixos = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:SamLukeYes/dde-nixos/no-dde-introduction";
+      url = "github:SamLukeYes/dde-nixos/excludePackages";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
   };
@@ -15,6 +15,11 @@
       dde-nixos.nixosModules.${system}
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
       ./iso.nix
+      {
+        environment.deepin.excludePackages = with dde-nixos.packages.${system}; [
+          dde-introduction
+        ];
+      }
     ];
   in {
     nixosConfigurations = {
