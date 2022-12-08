@@ -20,11 +20,6 @@
       dde-nixos.nixosModules.${system}
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
       ./iso.nix
-      {
-        environment.deepin.excludePackages = with dde-nixos.packages.${system}; [
-          dde-introduction
-        ];
-      }
     ];
   in {
     nixosConfigurations = {
