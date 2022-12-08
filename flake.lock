@@ -8,16 +8,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1670426440,
+        "lastModified": 1670463701,
         "narHash": "sha256-LZdzNnprIUrpgKOMoi6qDTMpqwtXkYYrBJ+4RVTz6Q0=",
-        "owner": "SamLukeYes",
+        "owner": "linuxdeepin",
         "repo": "dde-nixos",
-        "rev": "81bef55743040613763430a15a12d672212f23c9",
+        "rev": "4150ab4b86af51607cec3c74e56223fc4bea0fe1",
         "type": "github"
       },
       "original": {
-        "owner": "SamLukeYes",
-        "ref": "excludePackages",
+        "owner": "linuxdeepin",
         "repo": "dde-nixos",
         "type": "github"
       }

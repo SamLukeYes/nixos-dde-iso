@@ -4,7 +4,7 @@
   inputs = {
     dde-nixos = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:SamLukeYes/dde-nixos/excludePackages";
+      url = "github:linuxdeepin/dde-nixos";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
   };
