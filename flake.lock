@@ -55,7 +55,24 @@
     "root": {
       "inputs": {
         "dde-nixos": "dde-nixos",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "yes": "yes"
+      }
+    },
+    "yes": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669961030,
+        "narHash": "sha256-iWcYr92y/yPnVni3q6BPPFInQZ4yn6lZSFCBTXRRjQE=",
+        "owner": "SamLukeYes",
+        "repo": "nix-custom-packages",
+        "rev": "28fae354097e7b86821d3288f74e22b7e7b6f2ae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "SamLukeYes",
+        "repo": "nix-custom-packages",
+        "type": "github"
       }
     }
   },
