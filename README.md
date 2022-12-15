@@ -1,5 +1,7 @@
 # NixOS live image with DDE
 
+**Warning: This repo is still a work in progress. The applications and features in the live images may be subject to change.**
+
 ### Build
 
 - generic build
