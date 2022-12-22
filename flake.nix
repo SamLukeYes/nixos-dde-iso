@@ -47,8 +47,8 @@
       cn = self.nixosConfigurations.cn.config.system.build.isoImage;
     };
     devShell.${system} = with pkgs; with (import yes { inherit pkgs; }); mkShell {
-      buildInputs = [ archlinux.run-archiso xonsh ];
-      shellHook = "exec xonsh";
+      buildInputs = [ archlinux.run-archiso ];
+      shellHook = "exec $SHELL";
     };
   };
 }
