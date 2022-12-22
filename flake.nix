@@ -21,12 +21,16 @@
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
       ./iso.nix
       (with dde-nixos.packages.${system}; {
-        environment.deepin.excludePackages = [
-          dde-calendar
-          deepin-album
-          deepin-calculator
-          deepin-font-manager
-        ];
+        environment = {
+          deepin.excludePackages = [
+            dde-calendar
+            deepin-album
+            deepin-calculator
+          ];
+          systemPackages = [
+            deepin-clone
+          ];
+        };
       })
     ];
   in {
