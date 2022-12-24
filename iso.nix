@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # Fix calamares crash on startup
+  environment.pathsToLink = [ "/share/calamares" ];
+
   isoImage = {
     isoBaseName = "nixos-dde";
     squashfsCompression = "zstd";
