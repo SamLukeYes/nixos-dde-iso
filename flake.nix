@@ -18,7 +18,7 @@
     pkgs = import nixpkgs { inherit system; };
     commonModules = [
       dde-nixos.nixosModules.${system}
-      "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-base.nix"
+      "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares.nix"
       ./iso.nix
       (with dde-nixos.packages.${system}; {
         environment = {
