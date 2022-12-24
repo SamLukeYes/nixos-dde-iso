@@ -20,15 +20,6 @@
       dde-nixos.nixosModules.${system}
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares.nix"
       ./iso.nix
-      (with dde-nixos.packages.${system}; {
-        environment = {
-          deepin.excludePackages = [
-            dde-calendar
-            deepin-album
-            deepin-calculator
-          ];
-        };
-      })
     ];
   in {
     nixosConfigurations = {
