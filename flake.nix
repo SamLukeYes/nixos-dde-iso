@@ -27,9 +27,6 @@
             deepin-album
             deepin-calculator
           ];
-          systemPackages = [
-            deepin-clone
-          ];
         };
       })
     ];
