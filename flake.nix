@@ -7,15 +7,10 @@
       url = "github:linuxdeepin/dde-nixos";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
-    yes = {
-      flake = false;
-      url = "github:SamLukeYes/nix-custom-packages";
-    };
   };
 
-  outputs = { self, dde-nixos, nixpkgs, yes }: let
+  outputs = { self, dde-nixos, nixpkgs }: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs { inherit system; };
     commonModules = [
       dde-nixos.nixosModules.${system}
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares.nix"
@@ -37,10 +32,6 @@
     legacyPackages.${system} = {
       generic = self.nixosConfigurations.generic.config.system.build.isoImage;
       cn = self.nixosConfigurations.cn.config.system.build.isoImage;
-    };
-    devShell.${system} = with pkgs; with (import yes { inherit pkgs; }); mkShell {
-      buildInputs = [ archlinux.run-archiso ];
-      shellHook = "exec $SHELL";
     };
   };
 }

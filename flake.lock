@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1671812647,
-        "narHash": "sha256-+sS8qihDikMhHJ0+7K0vSG4rLg3piKIPeaaEkdy1zXo=",
+        "lastModified": 1672134854,
+        "narHash": "sha256-nUNLGgEVXiBkz1KIB9bCx+nLsRumjozxL/4JP+mXcBs=",
         "owner": "linuxdeepin",
         "repo": "dde-nixos",
-        "rev": "1becc4ed7eed720f74f9e35d3659462642bf3212",
+        "rev": "873192070f15aaa09410bbae0f7f13c473970aaf",
         "type": "github"
       },
       "original": {
@@ -38,11 +38,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1671752829,
-        "narHash": "sha256-oFeJzAq0iRL6md9Si8Tx9bltjwjLmldvgUmAteMhYW4=",
+        "lastModified": 1671883564,
+        "narHash": "sha256-C15oAtyupmLB3coZY7qzEHXjhtUx/+77olVdqVMruAg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9898811c658d39b2692d0ab744377e02fd85d08b",
+        "rev": "dac57a4eccf1442e8bf4030df6fcbb55883cb682",
         "type": "github"
       },
       "original": {
@@ -55,24 +55,7 @@
     "root": {
       "inputs": {
         "dde-nixos": "dde-nixos",
-        "nixpkgs": "nixpkgs",
-        "yes": "yes"
-      }
-    },
-    "yes": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1671592343,
-        "narHash": "sha256-b12nTnqrum/0/oKzNHblTcYuq+3W7qwonVU5kFVplZI=",
-        "owner": "SamLukeYes",
-        "repo": "nix-custom-packages",
-        "rev": "1bf17f74903575699d89083731f646d1d552c3ed",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SamLukeYes",
-        "repo": "nix-custom-packages",
-        "type": "github"
+        "nixpkgs": "nixpkgs"
       }
     }
   },
