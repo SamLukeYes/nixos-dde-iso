@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 {
+  boot.supportedFilesystems = [ "bcachefs" ];
+
   # Fix calamares crash on startup
   environment.pathsToLink = [ "/share/calamares" ];
 
