@@ -7,9 +7,9 @@
   environment.pathsToLink = [ "/share/calamares" ];
 
   fonts.fonts = with pkgs; [
-    inconsolata-nerdfont
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+    ubuntu_font_family    # for onboard
   ];
 
   isoImage = {
