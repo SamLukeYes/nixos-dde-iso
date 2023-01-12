@@ -1,25 +1,19 @@
 { lib, pkgs, ... }:
 
 {
-  fonts = {
-    fonts = with pkgs; [
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
+  fonts.fontconfig.defaultFonts = {
+    sansSerif = [
+      "Noto Sans"
+      "Noto Sans CJK SC"
     ];
-    fontconfig.defaultFonts = {
-      sansSerif = [
-        "Noto Sans"
-        "Noto Sans CJK SC"
-      ];
-      serif = [
-        "Noto Serif"
-        "Noto Serif CJK SC"
-      ];
-      monospace = [
-        "Noto Sans Mono"
-        "Noto Sans Mono CJK SC"
-      ];
-    };
+    serif = [
+      "Noto Serif"
+      "Noto Serif CJK SC"
+    ];
+    monospace = [
+      "Noto Sans Mono"
+      "Noto Sans Mono CJK SC"
+    ];
   };
 
   i18n = {

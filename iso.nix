@@ -6,6 +6,12 @@
   # Fix calamares crash on startup
   environment.pathsToLink = [ "/share/calamares" ];
 
+  fonts.fonts = with pkgs; [
+    inconsolata-nerdfont
+    noto-fonts-cjk-sans
+    noto-fonts-cjk-serif
+  ];
+
   isoImage = {
     isoBaseName = "nixos-dde";
     squashfsCompression = "zstd";
