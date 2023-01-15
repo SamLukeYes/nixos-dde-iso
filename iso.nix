@@ -12,7 +12,7 @@
 
   isoImage = {
     isoBaseName = "nixos-dde";
-    squashfsCompression = "zstd";
+    # squashfsCompression = "zstd";
   };
 
   nix.settings = {
