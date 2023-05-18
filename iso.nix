@@ -23,13 +23,6 @@
     fallback = true;
   };
 
-  # Use alternative browser
-  nixpkgs.overlays = [(
-    final: prev: {
-      firefox = final.epiphany;
-    }
-  )];
-
   services.xserver = {
     enable = true;
     displayManager = {

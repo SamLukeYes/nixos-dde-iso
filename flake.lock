@@ -1,60 +1,41 @@
 {
   "nodes": {
-    "dde-nixos": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
+    "calamares-deepin": {
+      "flake": false,
       "locked": {
-        "lastModified": 1673516572,
-        "narHash": "sha256-mopio8LLcO4tq/Zm8OR/W8/P9+VGeD5QIGztu9FeQEE=",
-        "owner": "linuxdeepin",
-        "repo": "dde-nixos",
-        "rev": "be0c614af57581a49ee3ca2dca3da76ada8ecee6",
+        "lastModified": 1683776240,
+        "narHash": "sha256-pPiKOIOQfFxEyuHqzY0QYmY33KRHgx38FbJ2qML0SO0=",
+        "owner": "wineee",
+        "repo": "calamares-nixos-extensions",
+        "rev": "fac0150c4bd2872fbd1f1e873b30f48fbdd6546d",
         "type": "github"
       },
       "original": {
-        "owner": "linuxdeepin",
-        "repo": "dde-nixos",
-        "type": "github"
-      }
-    },
-    "flake-utils": {
-      "locked": {
-        "lastModified": 1667395993,
-        "narHash": "sha256-nuEHfE/LcWyuSWnS8t12N1wc105Qtau+/OdUAjtQ0rA=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "5aed5285a952e0b949eb3ba02c12fa4fcfef535f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
+        "owner": "wineee",
+        "ref": "deepin",
+        "repo": "calamares-nixos-extensions",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1673612960,
-        "narHash": "sha256-DWR7hrbecJKmUJCswk9MXZta710mq+3jZwTvHU/UfyY=",
+        "lastModified": 1684305980,
+        "narHash": "sha256-vd4SKXX1KZfSX6n3eoguJw/vQ+sBL8XGdgfxjEgLpKc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e285dd0ca97c264003867c7329f0d1f4f028739c",
+        "rev": "e6e389917a8c778be636e67a67ec958f511cc55d",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-22.11",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "dde-nixos": "dde-nixos",
+        "calamares-deepin": "calamares-deepin",
         "nixpkgs": "nixpkgs"
       }
     }
