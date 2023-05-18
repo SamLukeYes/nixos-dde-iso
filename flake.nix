@@ -14,6 +14,12 @@
     commonModules = [
       "${nixpkgs}/nixos/modules/installer/cd-dvd/installation-cd-graphical-calamares.nix"
       ./iso.nix
+
+      {
+        nixpkgs.overlays = [
+          self.overlays.default
+        ];
+      }
     ];
   in {
     overlays.default = final: prev: {
