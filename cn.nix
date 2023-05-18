@@ -29,6 +29,7 @@
   isoImage.isoBaseName = lib.mkForce "nixos-dde-cn";
 
   nix.settings.substituters = [
+    "https://mirror.iscas.ac.cn/nix-channels/store"
     "https://mirrors.bfsu.edu.cn/nix-channels/store"
     "https://mirror.sjtu.edu.cn/nix-channels/store"
   ];
