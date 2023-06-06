@@ -2,7 +2,7 @@
   description = "NixOS live image with DDE";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     calamares-deepin = {
       flake = false;
       url = "github:wineee/calamares-nixos-extensions/deepin";
